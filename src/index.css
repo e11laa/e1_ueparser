@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #0f1116;
+  color: #e2e8f0;
+}
+
+:root {
+  --accent: #7c5cff;
+  --border: rgba(148, 163, 184, 0.24);
+  --panel: rgba(15, 23, 42, 0.65);
+  --surface: rgba(2, 6, 23, 0.75);
+  --text: #e2e8f0;
+  --muted: #94a3b8;
+  --mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
