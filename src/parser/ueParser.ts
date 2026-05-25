@@ -341,7 +341,10 @@ function decodeBase64(input: string): { value?: string; error?: string } {
     if (typeof atob === 'function') {
       return { value: atob(normalized) }
     }
-    return { value: Buffer.from(normalized, 'base64').toString('utf-8') }
+    if (typeof Buffer !== 'undefined') {
+      return { value: Buffer.from(normalized, 'base64').toString('utf-8') }
+    }
+    throw new Error('No base64 decoder available.')
   } catch (error) {
     return { error: error instanceof Error ? error.message : String(error) }
   }
