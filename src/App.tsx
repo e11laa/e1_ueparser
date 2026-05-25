@@ -27,8 +27,9 @@ function App() {
     const aiJson = JSON.stringify(
       {
         summary: result.summaryMarkdown,
-        objects: result.objects,
-        exportedNodes: result.exportedNodes,
+        objects: result.ai.objects,
+        exportedNodes: result.ai.exportedNodes,
+        commentGroups: result.ai.commentGroups,
       },
       null,
       2,
